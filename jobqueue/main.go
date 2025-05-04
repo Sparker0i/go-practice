@@ -10,7 +10,7 @@ func main() {
 	dispatcher := types.NewDispatcher(2, 10, 2*time.Second)
 	dispatcher.Run()
 
-	for i := 0; i < 50; i++ {
+	for i := range 50 {
 		dispatcher.JobQueue <- types.Job{
 			ID: i,
 		}
